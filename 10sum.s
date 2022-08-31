@@ -1,0 +1,19 @@
+	AREA SUM, CODE, READONLY
+ENTRY
+	MOV R0, #10;
+	MOV R1, #0;
+	MOV R2, #1
+NEXT ADD R1, R1, R2;
+	ADD R2, #1;
+	SUBS R0, #1;
+	BNE NEXT;
+	LDR R3, RES;
+	STR R1, [R3];
+		
+	
+	
+	
+B1 B B1
+RES DCD 0x40000000
+	
+END;
